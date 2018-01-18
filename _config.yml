@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
 
 include:              ["disti_state_machine_impl.js"]
+show_dir_listing: false
