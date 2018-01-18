@@ -15,7 +15,7 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'Debug\dist\resources.data';
+    var PACKAGE_NAME = 'Release\dist\resources.data';
     var REMOTE_PACKAGE_BASE = 'resources.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
@@ -25,7 +25,7 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
     var REMOTE_PACKAGE_SIZE = 2939;
-    var PACKAGE_UUID = '808fce7e-1a3f-4612-be58-4bbae496a12b';
+    var PACKAGE_UUID = '56365d47-cb7e-4eb6-a616-0d9768f71630';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -133,10 +133,10 @@ function assert(check, msg) {
       // Reuse the bytearray from the XHR as the source for file reads.
       DataRequest.prototype.byteArray = byteArray;
           DataRequest.prototype.requests["/FrontPage.glo"].onload();
-          Module['removeRunDependency']('datafile_Debug\dist\resources.data');
+          Module['removeRunDependency']('datafile_Release\dist\resources.data');
 
     };
-    Module['addRunDependency']('datafile_Debug\dist\resources.data');
+    Module['addRunDependency']('datafile_Release\dist\resources.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
